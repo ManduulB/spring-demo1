@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.Objects;
+
 @Entity
 public class Nutzer {
 
@@ -65,5 +67,26 @@ public class Nutzer {
         this.allergies = allergies;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Nutzer nutzer)) return false;
+        return isGender() == nutzer.isGender() && getAge() == nutzer.getAge() && Objects.equals(getId(), nutzer.getId()) && Objects.equals(getName(), nutzer.getName()) && Objects.equals(getAllergies(), nutzer.getAllergies());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), isGender(), getAge(), getAllergies());
+    }
+
+    @Override
+    public String toString() {
+        return "Nutzer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", gender=" + gender +
+                ", age=" + age +
+                ", allergies='" + allergies + '\'' +
+                '}';
+    }
 }
