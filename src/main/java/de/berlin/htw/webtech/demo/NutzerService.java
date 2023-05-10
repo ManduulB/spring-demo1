@@ -26,4 +26,5 @@ public class NutzerService {
         for (Nutzer nutzer : iterator)  Nutzers.add(nutzer);
         return Nutzers;
     }
+
 }

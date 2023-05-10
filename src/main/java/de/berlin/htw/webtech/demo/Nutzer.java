@@ -14,13 +14,13 @@ public class Nutzer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private boolean gender;
+    private String gender;
     private int age;
     private String allergies;
 
     public Nutzer(){}
 
-    public Nutzer(String name, boolean gender, int age, String allergies){
+    public Nutzer(String name, String gender, int age, String allergies){
         this.name = name;
         this.gender=gender;
         this.age=age;
@@ -43,11 +43,11 @@ public class Nutzer {
         this.name = name;
     }
 
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -71,12 +71,12 @@ public class Nutzer {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Nutzer nutzer)) return false;
-        return isGender() == nutzer.isGender() && getAge() == nutzer.getAge() && Objects.equals(getId(), nutzer.getId()) && Objects.equals(getName(), nutzer.getName()) && Objects.equals(getAllergies(), nutzer.getAllergies());
+        return getGender() == nutzer.getGender() && getAge() == nutzer.getAge() && Objects.equals(getId(), nutzer.getId()) && Objects.equals(getName(), nutzer.getName()) && Objects.equals(getAllergies(), nutzer.getAllergies());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), isGender(), getAge(), getAllergies());
+        return Objects.hash(getId(), getName(), getGender(), getAge(), getAllergies());
     }
 
     @Override

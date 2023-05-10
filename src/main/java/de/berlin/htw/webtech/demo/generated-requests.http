@@ -1,0 +1,10 @@
+###
+POST http://localhost:8080/Nutzers
+Content-Type: application/json
+
+{
+  "name": "Paul",
+  "gender": "male",
+  "age": 27,
+  "allergies": "none"
+}

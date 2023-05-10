@@ -20,7 +20,17 @@ public class NutzerController {
         return service.save(nutzer);
     }
 
-    //GetMapper mit Nutzer und der ID hinz
+    
 
-    //noch ein GetMapper vom Array hinz.
+    @GetMapping("/Nutzers/{id}")
+    public Nutzer getNutzer(@PathVariable String id) {
+        logger.info("GET request on route things with {}", id);
+        Long NutzerId = Long.parseLong(id);
+        return service.get(NutzerId);
+    }
+
+    @GetMapping("/Nutzers")
+    public List<Nutzer> getAllNutzers() {
+        return service.getAll();
+    }
 }
