@@ -38,5 +38,3 @@ out/
 ### H2 DB ###
 *.mv.db
 *.trace.db
-### Application properties ###
-*.application.properties
