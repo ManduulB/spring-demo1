@@ -3,9 +3,11 @@ POST http://localhost:8080/FoodSpotsList
 Content-Type: application/json
 
 {
-  "Lokalname": "Döner44",
-  "cateogry": "turkish fastfood",
-  "address": "Karl-Marx-Straße 119",
-  "rating": 5
+  "id": 2,
+  "name": "CITY CHICKEN BERLIN",
+  "category": "fast food",
+  "address": "Sonnenallee 59, 12045 Berlin",
+  "rating": 5 ,
+  "website": "https://www.city-chicken-berlin.de/"
 }
 

@@ -13,18 +13,21 @@ public class FoodSpots {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String Lokalname;
-    private String cateogry;
+    private String name;
+    private String category;
     private String address;
     private int rating;
+    private String website;
+
 
     public FoodSpots(){}
 
-    public FoodSpots(String Lokalname, String cateogry, String address, int rating){
-        this.Lokalname = Lokalname;
-        this.cateogry=cateogry;
+    public FoodSpots(String name, String category, String address, int rating, String website){
+        this.name = name;
+        this.category=category;
         this.address=address;
         this.rating=rating;
+        this.website=website;
     }
 
     public Long getId() {
@@ -35,20 +38,20 @@ public class FoodSpots {
         this.id = id;
     }
 
-    public String getLokalname() {
-        return Lokalname;
+    public String getName() {
+        return name;
     }
 
-    public void setLokalname(String lokalname) {
-        Lokalname = lokalname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCateogry() {
-        return cateogry;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCateogry(String cateogry) {
-        this.cateogry = cateogry;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getAddress() {
@@ -67,16 +70,24 @@ public class FoodSpots {
         this.rating = rating;
     }
 
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof FoodSpots foodSpots)) return false;
-        return getRating() == foodSpots.getRating() && Objects.equals(getId(), foodSpots.getId()) && Objects.equals(getLokalname(), foodSpots.getLokalname()) && Objects.equals(getCateogry(), foodSpots.getCateogry()) && Objects.equals(getAddress(), foodSpots.getAddress());
+        return getRating() == foodSpots.getRating() && Objects.equals(getId(), foodSpots.getId()) && Objects.equals(getName(), foodSpots.getName()) && Objects.equals(getCategory(), foodSpots.getCategory()) && Objects.equals(getAddress(), foodSpots.getAddress()) && Objects.equals(getWebsite(), foodSpots.getWebsite());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getLokalname(), getCateogry(), getAddress(), getRating());
+        return Objects.hash(getId(), getName(), getCategory(), getAddress(), getRating(), getWebsite());
     }
 
 
@@ -84,10 +95,11 @@ public class FoodSpots {
     public String toString() {
         return "FoodSpots{" +
                 "id=" + id +
-                ", Lokalname='" + Lokalname + '\'' +
-                ", cateogry='" + cateogry + '\'' +
+                ", name='" + name + '\'' +
+                ", category='" + category + '\'' +
                 ", address='" + address + '\'' +
-                ", rating=" + rating +
+                ", rating=" + rating + '\'' +
+                ", website=" + website +
                 '}';
     }
 }

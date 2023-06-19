@@ -8,3 +8,14 @@ Content-Type: application/json
   "age": 27,
   "allergies": "none"
 }
+
+###
+POST http://localhost:8080/Nutzers
+Content-Type: application/json
+
+{
+  "name": "Ralf",
+  "gender": "male",
+  "age": 7,
+  "allergies": "none"
+}
