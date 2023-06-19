@@ -1,0 +1,11 @@
+###
+POST http://localhost:8080/FoodSpotsList
+Content-Type: application/json
+
+{
+  "Lokalname": "Döner44",
+  "cateogry": "turkish fastfood",
+  "address": "Karl-Marx-Straße 119",
+  "rating": 5
+}
+
