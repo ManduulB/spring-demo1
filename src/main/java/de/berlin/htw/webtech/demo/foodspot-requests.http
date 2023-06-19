@@ -3,9 +3,28 @@ POST http://localhost:8080/FoodSpotsList
 Content-Type: application/json
 
 {
-  "Lokalname": "Döner44",
-  "cateogry": "turkish fastfood",
-  "address": "Karl-Marx-Straße 119",
-  "rating": 5
+  "id": 2,
+  "name": "CITY CHICKEN BERLIN",
+  "category": "fast food",
+  "address": "Sonnenallee 59, 12045 Berlin",
+  "rating": 5 ,
+  "website": "https://www.city-chicken-berlin.de/"
 }
 
+{
+  "id": 3,
+  "name": "Cocolo Ramen",
+  "category": "Asiatische Küche (Ramen)",
+  "address": "Paul-Lincke-Ufer 39-40, 10999 Berlin",
+  "rating": 4.5,
+  "website": "https://cocolo-ramen.com/"
+}
+
+{
+  "id": 4,
+  "name": "Borchardt",
+  "category": "Französische Küche",
+  "address": "Französische Straße 47, 10117 Berlin",
+  "rating": 4,
+  "website": "https://www.borchardt-restaurant.de/"
+}
