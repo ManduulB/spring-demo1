@@ -14,7 +14,7 @@ public class FoodSpotsController {
     FoodSpotService service;
 
 
-        Logger logger = LoggerFactory.getLogger(de.berlin.htw.webtech.demo.FoodSpotsController.class);
+        Logger logger = LoggerFactory.getLogger(FoodSpotsController.class);
 
         @PostMapping("/FoodSpotsList")
         public FoodSpots createFoodSpot(@RequestBody FoodSpots foodSpots){
