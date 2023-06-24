@@ -10,6 +10,9 @@ Content-Type: application/json
   "rating": 5 ,
   "website": "https://www.city-chicken-berlin.de/"
 }
+###
+POST http://localhost:8080/FoodSpotsList
+Content-Type: application/json
 
 {
   "id": 3,
@@ -19,6 +22,9 @@ Content-Type: application/json
   "rating": 4.5,
   "website": "https://cocolo-ramen.com/"
 }
+###
+POST http://localhost:8080/FoodSpotsList
+Content-Type: application/json
 
 {
   "id": 4,
