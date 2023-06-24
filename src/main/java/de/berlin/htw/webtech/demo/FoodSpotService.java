@@ -12,8 +12,8 @@ public class FoodSpotService {
     @Autowired
     FoodSpotsRepository repo;
 
-    public FoodSpots save(FoodSpots foodspots) {
-        return repo.save(foodspots);
+    public FoodSpots save(FoodSpots foodSpots) {
+        return repo.save(foodSpots);
     }
 
     public FoodSpots get(Long id) {
@@ -23,7 +23,7 @@ public class FoodSpotService {
     public List<FoodSpots> getAll() {
         Iterable<FoodSpots> iterator = repo.findAll();
         List<FoodSpots> FoodSpotsList = new ArrayList<FoodSpots>();
-        for (FoodSpots foodspot : iterator)  FoodSpotsList.add(foodspot);
+        for (FoodSpots foodSpots : iterator)  FoodSpotsList.add(foodSpots);
         return FoodSpotsList;
     }
 
