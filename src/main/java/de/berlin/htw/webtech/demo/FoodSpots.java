@@ -17,14 +17,15 @@ public class FoodSpots {
     private int rating;
     private String website;
 
-    public FoodSpots() {}
 
-    public FoodSpots(String name, String category, String address, int rating, String website) {
+    public FoodSpots(){}
+
+    public FoodSpots(String name, String category, String address, int rating, String website){
         this.name = name;
-        this.category = category;
-        this.address = address;
-        this.rating = rating;
-        this.website = website;
+        this.category=category;
+        this.address=address;
+        this.rating=rating;
+        this.website=website;
     }
 
     public Long getId() {
@@ -78,8 +79,7 @@ public class FoodSpots {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof FoodSpots)) return false;
-        FoodSpots foodSpots = (FoodSpots) o;
+        if (!(o instanceof FoodSpots foodSpots)) return false;
         return getRating() == foodSpots.getRating() && Objects.equals(getId(), foodSpots.getId()) && Objects.equals(getName(), foodSpots.getName()) && Objects.equals(getCategory(), foodSpots.getCategory()) && Objects.equals(getAddress(), foodSpots.getAddress()) && Objects.equals(getWebsite(), foodSpots.getWebsite());
     }
 
@@ -88,6 +88,7 @@ public class FoodSpots {
         return Objects.hash(getId(), getName(), getCategory(), getAddress(), getRating(), getWebsite());
     }
 
+
     @Override
     public String toString() {
         return "FoodSpots{" +
@@ -95,8 +96,8 @@ public class FoodSpots {
                 ", name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", address='" + address + '\'' +
-                ", rating=" + rating +
-                ", website='" + website + '\'' +
+                ", rating=" + rating + '\'' +
+                ", website=" + website +
                 '}';
     }
 }

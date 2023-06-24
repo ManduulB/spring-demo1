@@ -34,3 +34,15 @@ Content-Type: application/json
   "rating": 4,
   "website": "https://www.borchardt-restaurant.de/"
 }
+###
+POST http://localhost:8080/FoodSpotsList
+Content-Type: application/json
+
+{
+"id": 10,
+"name": "Burger King",
+"category": "Burger King Straße",
+"address": "Französische Straße 47, 10117 Berlin",
+"rating": 2,
+"website": "https://www.burger-king.de/"
+}
