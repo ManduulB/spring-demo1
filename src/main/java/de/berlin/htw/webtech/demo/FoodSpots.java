@@ -1,3 +1,5 @@
+package de.berlin.htw.webtech.demo;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
