@@ -23,7 +23,7 @@ public class NutzerService {
     public List<Nutzer> getAll() {
         Iterable<Nutzer> iterator = repo.findAll();
         List<Nutzer> Nutzers = new ArrayList<Nutzer>();
-        for (Nutzer nutzer : iterator)  Nutzers.add(nutzer);
+        for (Nutzer nutzer : iterator) Nutzers.add(nutzer);
         return Nutzers;
     }
 
