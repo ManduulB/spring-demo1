@@ -36,6 +36,23 @@ public class FoodSpotsController {
         return service.getAll();
     }
 
+/*    @PutMapping("/FoodSpotsList/{id}")
+    public ResponseEntity<FoodSpots> updateFoodSpot(@PathVariable String id, @RequestBody FoodSpots foodSpots) {
+        Long FoodSpotId = Long.parseLong(id);
+        FoodSpots existingFoodSpot = service.get(FoodSpotId);
+
+        if (existingFoodSpot != null) {
+            existingFoodSpot.setName(foodSpots.getName());
+            existingFoodSpot.setDescription(foodSpots.getDescription());
+            // Update other properties as needed
+
+            FoodSpots updatedFoodSpot = service.save(existingFoodSpot);
+            return ResponseEntity.ok(updatedFoodSpot);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+*/
+
 /*
     @DeleteMapping(path = "/api/v1/persons/{id}")
     public ResponseEntity<Void> deletePerson(@PathVariable Long id) {
