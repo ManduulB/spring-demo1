@@ -36,7 +36,7 @@ public class FoodSpotsController {
         return service.getAll();
     }
 
-/*    @PutMapping("/FoodSpotsList/{id}")
+   /* @PutMapping("/FoodSpotsList/{id}")
     public ResponseEntity<FoodSpots> updateFoodSpot(@PathVariable String id, @RequestBody FoodSpots foodSpots) {
         Long FoodSpotId = Long.parseLong(id);
         FoodSpots existingFoodSpot = service.get(FoodSpotId);
@@ -51,16 +51,16 @@ public class FoodSpotsController {
         } else {
             return ResponseEntity.notFound().build();
         }
-*/
+    }
 
-/*
-    @DeleteMapping(path = "/api/v1/persons/{id}")
-    public ResponseEntity<Void> deletePerson(@PathVariable Long id) {
+
+    @DeleteMapping(path = "/FoodSpotsList/{id}")
+    public ResponseEntity<Void> deleteFoodSpot(@PathVariable Long id) {
         boolean successful = FoodSpotService.deleteById(id);
         return successful? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
+*/
 
- */
 
 }
 
