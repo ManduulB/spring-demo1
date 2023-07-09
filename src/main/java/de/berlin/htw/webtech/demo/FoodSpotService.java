@@ -29,12 +29,12 @@ public class FoodSpotService {
 
 /*
     public boolean deleteById(Long id) {
-        if (!FoodSpotsRepository.existsById(id)) {
-            return false;
-        }
-
-        FoodSpotsRepository.deleteById(lokalname, id);
-        return true;
+    if (!FoodSpotsRepository.existsById(id)) {
+        return false;
     }
+
+    FoodSpotsRepository.deleteById(id);
+    return true;
+}
 */
 }

@@ -31,6 +31,7 @@ public class FoodSpotsController {
         return service.get(FoodSpotId);
     }
 
+
     @GetMapping("/FoodSpotsList")
     public List<FoodSpots> getAllFoodSpotsList() {
         return service.getAll();
@@ -54,11 +55,12 @@ public class FoodSpotsController {
 */
 
 /*
-    @DeleteMapping(path = "/api/v1/persons/{id}")
-    public ResponseEntity<Void> deletePerson(@PathVariable Long id) {
-        boolean successful = FoodSpotService.deleteById(id);
-        return successful? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
-    }
+  @DeleteMapping("/FoodSpotsList/{id}")
+public ResponseEntity<Void> deleteFoodSpot(@PathVariable Long id) {
+    boolean successful = service.deleteById(id);
+    return successful ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+}
+
 
  */
 
