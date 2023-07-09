@@ -26,15 +26,12 @@ public class FoodSpotService {
         for (FoodSpots foodSpots : iterator)  FoodSpotsList.add(foodSpots);
         return FoodSpotsList;
     }
-/*
-
     public boolean deleteById(Long id) {
-        if (!FoodSpotsRepository.existsById(id)) {
+        if (!repo.existsById(id)) {
             return false;
         }
-
-        FoodSpotsRepository.deleteById(name, id);
+        repo.deleteById(id);
         return true;
     }
-*/
+
 }

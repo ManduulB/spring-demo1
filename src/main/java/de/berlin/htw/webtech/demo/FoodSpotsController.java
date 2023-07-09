@@ -53,13 +53,14 @@ public class FoodSpotsController {
         }
     }
 
-
-    @DeleteMapping(path = "/FoodSpotsList/{id}")
-    public ResponseEntity<Void> deleteFoodSpot(@PathVariable Long id) {
-        boolean successful = FoodSpotService.deleteById(id);
-        return successful? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
-    }
 */
+   @DeleteMapping(path = "/FoodSpotsList/{id}")
+   public ResponseEntity<Void> deleteFoodSpot(@PathVariable Long id) {
+       boolean successful = service.deleteById(id);
+       return successful? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+   }
+
+
 
 
 }
